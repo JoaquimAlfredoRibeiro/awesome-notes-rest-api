@@ -62,7 +62,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 
 	@Override
-	//Alow access to /oapi for user authorization
+	//Allow access to /oapi for user authorization
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 				.cors()
