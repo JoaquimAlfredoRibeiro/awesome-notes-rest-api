@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+    <Appenders>
+            <File name="FileLogger" fileName="./logs/app.log">
+                <PatternLayout>
+                    <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+                </PatternLayout>
+            </File>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="pt.home" additivity="false" level="DEBUG">
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+        <Logger name="org.springframework" additivity="false" level="WARN">
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+        <Logger name="org.springframework.security" additivity="false" level="WARN">
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+        <Logger name="org.springframework.remoting.support.RemoteInvocationTraceInterceptor" additivity="false" level="WARN">
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
+        <Root level="INFO" additivity="false">
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
